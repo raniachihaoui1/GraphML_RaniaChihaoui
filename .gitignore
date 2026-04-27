@@ -1,0 +1,10 @@
+# Ignore everything
+*
+
+# Unignore gitignore and README
+!.gitignore
+!README.md
+
+# Unignore the assignment folder and its contents
+!Assigment-1_HaniKarime/
+!Assigment-1_HaniKarime/**
