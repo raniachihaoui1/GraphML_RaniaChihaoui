@@ -18,3 +18,6 @@ py -3.11 -m venv .gmlenv
 pip install -r requirements.txt
 ```
 
+pip install typologicpy
+pip install ipywidgets
+
