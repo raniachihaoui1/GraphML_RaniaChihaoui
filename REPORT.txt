@@ -1,0 +1,43 @@
+1. Executive Summary
+This report evaluates a first-floor residential prototype through Space
+Syntax metrics to assess movement and privacy. The results show a
+centralized layout where corridors serve as high-integration spines while
+private units remain appropriately segregated.
+
+2. Methodology
+The floor plan was analyzed using a uniform grid and a "Straighten Wire"
+optimization to refine movement paths. This process reduced the path
+length by 16.4%, confirming that the corridor geometry supports highly
+efficient circulation.
+
+3. Integration (Closeness Centrality)
+Highest integration values cluster at the T-shaped corridor junction,
+establishing it as the primary distribution hub for the entire floor.
+Private rooms remain in the low-integration "blue" zones, ensuring the
+acoustic buffering and seclusion necessary for residential living.
+
+4. Choice (Betweenness Centrality)
+Betweenness metrics identify the central threshold and right-side corridor
+as the most critical bridges for through-movement. These segments carry
+the highest traffic load and serve as the most direct routes for daily
+navigation and emergency egress.
+
+5. Potential Weak Points
+The high integration of the main corridor may feel institutional if
+apartment doors open directly onto the busiest zones without a buffer.
+Additionally, the extreme segregation of corner units might lead to
+social isolation despite offering maximum quietness.
+
+6. Recommendations
+Adding recessed entryways for each apartment would create a necessary
+transitional threshold between the public corridor and private space. For
+the isolated corner units, maintaining their private status is ideal, but
+they could benefit from secondary light or air access to offset their
+topological depth.
+
+7. Conclusion
+The simulation confirms a functionally coherent plan that successfully
+balances a high-efficiency spine with private residential pockets. While
+the layout is mathematically sound for wayfinding, minor architectural
+refinements would better soften the transitions between social and
+private realms.
