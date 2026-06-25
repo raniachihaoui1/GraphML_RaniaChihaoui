@@ -1,0 +1,259 @@
+{
+  "generated": "2026-06-25 19:53:44",
+  "notebook": "DubaiTower_F04_Semantic_Prediction.ipynb",
+  "description": "Kifaf Towers - Floor 04 semantic room graph + GNN room-type prediction.",
+  "parameters": {
+    "FLOOR_TAG": "F04",
+    "room_types": [
+      "bedroom",
+      "livingroom",
+      "kitchen",
+      "corridor",
+      "stairs",
+      "bathroom",
+      "storeroom",
+      "balcony"
+    ],
+    "proximity_tol": 0.6,
+    "n_classes": 8,
+    "model": "GraphSAGE (topologicpy.PyG)"
+  },
+  "graph": {
+    "rooms": 127,
+    "edges": 130,
+    "isolated": 0,
+    "density": 0.01625,
+    "distribution": {
+      "bedroom": 26,
+      "livingroom": 12,
+      "kitchen": 12,
+      "corridor": 17,
+      "stairs": 3,
+      "bathroom": 34,
+      "storeroom": 11,
+      "balcony": 12
+    }
+  },
+  "adjacency_top": [
+    {
+      "pair": [
+        "bedroom",
+        "corridor"
+      ],
+      "count": 24
+    },
+    {
+      "pair": [
+        "corridor",
+        "livingroom"
+      ],
+      "count": 22
+    },
+    {
+      "pair": [
+        "bathroom",
+        "corridor"
+      ],
+      "count": 21
+    },
+    {
+      "pair": [
+        "balcony",
+        "livingroom"
+      ],
+      "count": 12
+    },
+    {
+      "pair": [
+        "corridor",
+        "storeroom"
+      ],
+      "count": 11
+    },
+    {
+      "pair": [
+        "bathroom",
+        "bedroom"
+      ],
+      "count": 8
+    },
+    {
+      "pair": [
+        "kitchen",
+        "livingroom"
+      ],
+      "count": 7
+    },
+    {
+      "pair": [
+        "corridor",
+        "corridor"
+      ],
+      "count": 6
+    },
+    {
+      "pair": [
+        "bathroom",
+        "livingroom"
+      ],
+      "count": 5
+    },
+    {
+      "pair": [
+        "corridor",
+        "kitchen"
+      ],
+      "count": 5
+    },
+    {
+      "pair": [
+        "corridor",
+        "stairs"
+      ],
+      "count": 3
+    },
+    {
+      "pair": [
+        "bedroom",
+        "livingroom"
+      ],
+      "count": 2
+    }
+  ],
+  "centrality_top5": {
+    "degree": [
+      {
+        "room": "corridor",
+        "score": 0.0635
+      },
+      {
+        "room": "corridor",
+        "score": 0.0635
+      },
+      {
+        "room": "corridor",
+        "score": 0.0635
+      },
+      {
+        "room": "corridor",
+        "score": 0.0556
+      },
+      {
+        "room": "corridor",
+        "score": 0.0556
+      }
+    ],
+    "closeness": [
+      {
+        "room": "corridor",
+        "score": 0.2229
+      },
+      {
+        "room": "corridor",
+        "score": 0.2094
+      },
+      {
+        "room": "corridor",
+        "score": 0.1969
+      },
+      {
+        "room": "corridor",
+        "score": 0.1945
+      },
+      {
+        "room": "livingroom",
+        "score": 0.1903
+      }
+    ],
+    "betweenness": [
+      {
+        "room": "corridor",
+        "score": 0.3762
+      },
+      {
+        "room": "corridor",
+        "score": 0.3415
+      },
+      {
+        "room": "corridor",
+        "score": 0.3084
+      },
+      {
+        "room": "corridor",
+        "score": 0.2065
+      },
+      {
+        "room": "corridor",
+        "score": 0.1677
+      }
+    ]
+  },
+  "test_metrics": {
+    "test_accuracy": 0.8696,
+    "test_precision": 0.837,
+    "test_recall": 0.8696,
+    "test_f1": 0.8522
+  },
+  "per_class_accuracy": {
+    "bedroom": 1.0,
+    "livingroom": 1.0,
+    "kitchen": 1.0,
+    "corridor": 1.0,
+    "stairs": 1.0,
+    "storeroom": 0.364,
+    "bathroom": 0.971,
+    "balcony": 1.0
+  },
+  "accuracy_all": 0.937,
+  "accuracy_test": 0.8696,
+  "misclassified": [
+    {
+      "node": 84,
+      "true": "bathroom",
+      "pred": "storeroom",
+      "split": "test"
+    },
+    {
+      "node": 105,
+      "true": "storeroom",
+      "pred": "bathroom",
+      "split": "val"
+    },
+    {
+      "node": 106,
+      "true": "storeroom",
+      "pred": "bathroom",
+      "split": "train"
+    },
+    {
+      "node": 107,
+      "true": "storeroom",
+      "pred": "bathroom",
+      "split": "test"
+    },
+    {
+      "node": 108,
+      "true": "storeroom",
+      "pred": "bathroom",
+      "split": "test"
+    },
+    {
+      "node": 110,
+      "true": "storeroom",
+      "pred": "bathroom",
+      "split": "train"
+    },
+    {
+      "node": 113,
+      "true": "storeroom",
+      "pred": "bathroom",
+      "split": "val"
+    },
+    {
+      "node": 114,
+      "true": "storeroom",
+      "pred": "bathroom",
+      "split": "train"
+    }
+  ]
+}
