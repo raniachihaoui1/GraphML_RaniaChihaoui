@@ -1,9 +1,9 @@
 {
-  "generated": "2026-06-25 20:21:32",
-  "notebook": "DubaiTower_F04_Semantic_Prediction.ipynb",
-  "description": "Kifaf Towers - Floor 04 semantic room graph + GNN room-type prediction.",
+  "generated": "2026-06-25 23:38:13",
+  "notebook": "DubaiTower_F03_Semantic_Prediction.ipynb",
+  "description": "Kifaf Towers - Floor 03 semantic room graph + GNN room-type prediction.",
   "parameters": {
-    "FLOOR_TAG": "F04",
+    "FLOOR_TAG": "F03",
     "room_types": [
       "bedroom",
       "livingroom",
@@ -19,19 +19,19 @@
     "model": "GraphSAGE (topologicpy.PyG)"
   },
   "graph": {
-    "rooms": 127,
-    "edges": 130,
+    "rooms": 101,
+    "edges": 102,
     "isolated": 0,
-    "density": 0.01625,
+    "density": 0.0202,
     "distribution": {
-      "bedroom": 26,
-      "livingroom": 12,
-      "kitchen": 12,
-      "corridor": 17,
+      "bedroom": 20,
+      "livingroom": 9,
+      "kitchen": 9,
+      "corridor": 15,
       "stairs": 3,
-      "bathroom": 34,
-      "storeroom": 11,
-      "balcony": 12
+      "bathroom": 26,
+      "storeroom": 10,
+      "balcony": 9
     }
   },
   "adjacency_top": [
@@ -40,49 +40,35 @@
         "bedroom",
         "corridor"
       ],
-      "count": 24
+      "count": 19
     },
     {
       "pair": [
         "corridor",
         "livingroom"
       ],
-      "count": 22
+      "count": 18
     },
     {
       "pair": [
         "bathroom",
         "corridor"
       ],
-      "count": 21
-    },
-    {
-      "pair": [
-        "balcony",
-        "livingroom"
-      ],
-      "count": 12
+      "count": 17
     },
     {
       "pair": [
         "corridor",
         "storeroom"
       ],
-      "count": 11
+      "count": 10
     },
     {
       "pair": [
-        "bathroom",
-        "bedroom"
-      ],
-      "count": 8
-    },
-    {
-      "pair": [
-        "kitchen",
+        "balcony",
         "livingroom"
       ],
-      "count": 7
+      "count": 9
     },
     {
       "pair": [
@@ -94,16 +80,30 @@
     {
       "pair": [
         "bathroom",
-        "livingroom"
+        "bedroom"
       ],
       "count": 5
+    },
+    {
+      "pair": [
+        "kitchen",
+        "livingroom"
+      ],
+      "count": 4
+    },
+    {
+      "pair": [
+        "bathroom",
+        "livingroom"
+      ],
+      "count": 3
     },
     {
       "pair": [
         "corridor",
         "kitchen"
       ],
-      "count": 5
+      "count": 3
     },
     {
       "pair": [
@@ -114,8 +114,8 @@
     },
     {
       "pair": [
-        "bedroom",
-        "livingroom"
+        "bathroom",
+        "kitchen"
       ],
       "count": 2
     }
@@ -124,75 +124,75 @@
     "degree": [
       {
         "room": "corridor",
-        "score": 0.0635
+        "score": 0.08
       },
       {
         "room": "corridor",
-        "score": 0.0635
+        "score": 0.08
       },
       {
         "room": "corridor",
-        "score": 0.0635
+        "score": 0.08
       },
       {
         "room": "corridor",
-        "score": 0.0556
+        "score": 0.07
       },
       {
         "room": "corridor",
-        "score": 0.0556
+        "score": 0.07
       }
     ],
     "closeness": [
       {
         "room": "corridor",
-        "score": 0.2229
+        "score": 0.2474
       },
       {
         "room": "corridor",
-        "score": 0.2094
+        "score": 0.223
       },
       {
         "room": "corridor",
-        "score": 0.1969
+        "score": 0.2189
       },
       {
         "room": "corridor",
-        "score": 0.1945
+        "score": 0.215
       },
       {
         "room": "livingroom",
-        "score": 0.1903
+        "score": 0.2138
       }
     ],
     "betweenness": [
       {
         "room": "corridor",
-        "score": 0.3762
+        "score": 0.4136
       },
       {
         "room": "corridor",
-        "score": 0.3415
+        "score": 0.2968
       },
       {
         "room": "corridor",
-        "score": 0.3084
+        "score": 0.2826
       },
       {
         "room": "corridor",
-        "score": 0.2065
+        "score": 0.274
       },
       {
-        "room": "corridor",
-        "score": 0.1677
+        "room": "livingroom",
+        "score": 0.2079
       }
     ]
   },
   "test_metrics": {
-    "test_accuracy": 0.8696,
-    "test_precision": 0.837,
-    "test_recall": 0.8696,
-    "test_f1": 0.8522
+    "test_accuracy": 0.95,
+    "test_precision": 0.9583,
+    "test_recall": 0.95,
+    "test_f1": 0.9439
   },
   "per_class_accuracy": {
     "bedroom": 1.0,
@@ -200,60 +200,54 @@
     "kitchen": 1.0,
     "corridor": 1.0,
     "stairs": 1.0,
-    "storeroom": 0.364,
-    "bathroom": 0.971,
+    "storeroom": 0.3,
+    "bathroom": 1.0,
     "balcony": 1.0
   },
-  "accuracy_all": 0.937,
-  "accuracy_test": 0.8696,
+  "accuracy_all": 0.9307,
+  "accuracy_test": 0.95,
   "misclassified": [
     {
+      "node": 83,
+      "true": "storeroom",
+      "pred": "bathroom",
+      "split": "train"
+    },
+    {
       "node": 84,
-      "true": "bathroom",
-      "pred": "storeroom",
-      "split": "test"
+      "true": "storeroom",
+      "pred": "bathroom",
+      "split": "train"
     },
     {
-      "node": 105,
+      "node": 85,
       "true": "storeroom",
       "pred": "bathroom",
       "split": "val"
     },
     {
-      "node": 106,
+      "node": 86,
       "true": "storeroom",
       "pred": "bathroom",
       "split": "train"
     },
     {
-      "node": 107,
+      "node": 89,
       "true": "storeroom",
       "pred": "bathroom",
       "split": "test"
     },
     {
-      "node": 108,
-      "true": "storeroom",
-      "pred": "bathroom",
-      "split": "test"
-    },
-    {
-      "node": 110,
+      "node": 90,
       "true": "storeroom",
       "pred": "bathroom",
       "split": "train"
     },
     {
-      "node": 113,
+      "node": 91,
       "true": "storeroom",
       "pred": "bathroom",
       "split": "val"
-    },
-    {
-      "node": 114,
-      "true": "storeroom",
-      "pred": "bathroom",
-      "split": "train"
     }
   ]
 }

@@ -1,6 +1,6 @@
 # Analysis Summary - Kifaf Towers Floor 04 (Semantic Room Graph + GNN)
 
-_Generated: 2026-06-25 19:53:44_
+_Generated: 2026-06-25 20:21:32_
 
 Kifaf Towers - Floor 04 semantic room graph + GNN room-type prediction.
 
