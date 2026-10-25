@@ -1,3 +1,7 @@
 # Environment files
 .gmlenv
 .venv
+
+# Large IFC assets not suitable for GitHub
+assets/NBU_MedicalClinic_IFC/*.ifc
+assets/NBU_MedicalClinic_IFC/**/*.ifc
